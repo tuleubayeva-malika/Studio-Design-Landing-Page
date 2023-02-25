@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway">
+    </head>
+    <body>
+        <header>
+            <div class="main-logo">
+                <a href="#" class="top-menu-logo" target="_blank">
+                    <img src="/Studio-Design-Landin-Page/img/top-menu-logo.png" alt="top-menu-logo.png" height="34px">
+                </a>
+            </div>
+            <nav>
+                <a href="#" class="menu-item active" target="_blank" onclick="handleClick(event)">
+                    Home
+                </a>
+                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
+                    What We Do
+                </a>
+                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
+                    Service
+                </a>
+                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
+                    Project
+                </a>
+                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
+                    Blog
+                </a>
+                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
+                    Contact
+                </a>
+            </nav>
+        </header>
+        <main>
+            <div class="headliner">
+                <div class="headliner-description">
+                    <h1>A Digital Product Agency</h1>
+                    <p>Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online business services.</p>
+                    <button>Contact now</button>
+                </div>
+                <div class="headliner-img">
+                    <img src="/Studio-Design-Landin-Page/img/headliner.png" alt="headliner.png" width="650px">
+                </div>
+                <img class="ellipse-85" src="/Studio-Design-Landin-Page/img/Ellipse-85.svg">
+                <img class="dots" src="/Studio-Design-Landin-Page/img/Dot Ornament.svg">
+                <img class="rectangle-23" src="/Studio-Design-Landin-Page/img/Rectangle-23.svg">
+            </div>
+
+            <div class="our-client-h1">
+                <h1>Our Client</h1>
+            </div>
+
+            <div class="our-client">
+                <p>Several selected clients, who already believe in our service.</p>
+                <a href="#" target="_blank">
+                    <img src="/Studio-Design-Landin-Page/img/Google-Logo.svg" alt="Google-Logo.svg" width="130px">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="/Studio-Design-Landin-Page/img/air-bnb.svg" alt="air-bnb.svg" width="130px">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="/Studio-Design-Landin-Page/img/Uber-Eats-Logo.svg" alt="Uber-Eats-Logo.svg" width="130px">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="/Studio-Design-Landin-Page/img/Amazon-Logo.svg" alt="Amazon-Logo.svg" width="130px">
+                </a>
+            </div>
+            <div class="help">
+                <div class="help-column-1">
+                    <h1>How can we help your Business ?</h1>
+                    <p>We build readymade websites, mobile applications, and elaborate online business services.</p>
+                </div>
+                <div class="help-column-4"></div>
+                <div class="help-column-2">
+                    <div class="help-column-2-item-1">
+                        <img src="/Studio-Design-Landin-Page/img/box-search-1.svg" alt="business-idea-planning-img" width="50px">
+                        <h3>Business Idea Planning</h3>
+                        <p>We present you a proposal and discuss niffty-gritty like</p>
+                    </div>
+                    <div class="help-column-2-item-2">
+                        <img src="/Studio-Design-Landin-Page/img/code-1-1.svg" alt="development-website-and-app-img" width="50px">
+                        <h3>Development Website and App</h3>
+                        <p>Communication protocols apart from engagement models</p>
+                    </div>
+                </div>
+                <div class="help-column-3">
+                    <div class="help-column-3-item-1">
+                        <img src="/Studio-Design-Landin-Page/img/empty-wallet-1.svg" alt="financial-planning-system-img" width="50px">
+                        <h3>Financial Planning System</h3>
+                        <p>Protocols apart from aengage models, pricing billing</p>
+                    </div>
+                    <div class="help-column-3-item-2">
+                        <img src="/Studio-Design-Landin-Page/img/chart-square-1.svg" alt="market-analysis-project-img" width="50px">
+                        <h3>Market Analysis Project</h3>
+                        <p>Protocols apart from aengage models, pricing billing</p>
+                    </div>
+                
+
+                </div>
+                <img class="Rectangle-25" src="/Studio-Design-Landin-Page/img/Rectangle-25.svg">
+                <img class="Rectangle-24" src="/Studio-Design-Landin-Page/img/Rectangle-24.svg">
+                <!-- <img src="/Studio-Design-Landin-Page/img/Group 70.svg">
+                <img src="/Studio-Design-Landin-Page/img/Ellipse-87.svg"> -->
+        </main>
+        <script>
+            function handleClick (e) {
+                e.preventDefault(); 
+                // e.stopPropagation();
+                console.log('clicked');
+                // 1 - найти элемент с классом Home и удалить у него класс
+                // 2 - взять эл-т и добавить в него класс Home
+                const previous = document.querySelector('.active');
+                console.log(e);
+                previous.classList.remove('active');
+                e.target.classList.add('active');
+            }
+
+            const button = document.getElementsByTagName('button');
+            console.log(button);
+            button[0].addEventListener('click', function() {
+                console.log('Contact me click');
+            });
+        </script>
+    </body>
+</html>
