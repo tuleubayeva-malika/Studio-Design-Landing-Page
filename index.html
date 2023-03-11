@@ -18,7 +18,7 @@
                 <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
                     What We Do
                 </a>
-                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
+                <!-- <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
                     Service
                 </a>
                 <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
@@ -26,7 +26,7 @@
                 </a>
                 <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
                     Blog
-                </a>
+                </a> -->
                 <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
                     Contact
                 </a>
@@ -37,7 +37,7 @@
                 <div class="headliner-description">
                     <h1>A Digital Product Agency</h1>
                     <p>Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online business services.</p>
-                    <button>Contact now</button>
+                    <button><a href="#form">Contact now</a></button>
                 </div>
                 <div class="headliner-img">
                     <img src="/Studio-Design-Landing-Page/img/headliner.png" alt="headliner.png" width="650px">
@@ -52,7 +52,7 @@
             </div>
 
             <div class="our-client">
-                <p>Several selected clients, who already believe in our service.</p>
+                <p>Several selected clients, who already <br> believe in our service.</p>
                 <a href="#" target="_blank">
                     <img src="/Studio-Design-Landing-Page/img/Google-Logo.svg" alt="Google-Logo.svg" width="130px">
                 </a>
@@ -100,9 +100,80 @@
                 </div>
                 <img class="Rectangle-25" src="/Studio-Design-Landing-Page/img/Rectangle-25.svg">
                 <img class="Rectangle-24" src="/Studio-Design-Landing-Page/img/Rectangle-24.svg">
-                <!-- <img src="/Studio-Design-Landing-Page/img/Group 70.svg">
-                <img src="/Studio-Design-Landing-Page/img/Ellipse-87.svg"> -->
+                <img class="Group-70" src="/Studio-Design-Landing-Page/img/Group 70.svg">
+                <img class="Ellipse-87" src="/Studio-Design-Landing-Page/img/Ellipse-87.svg">
+            </div>
+            <div class="newsletter">
+                <div class="newsletter-bkgrnd">
+                    <img class="Rectangle-30" src="/Studio-Design-Landing-Page/img/Rectangle-30.svg">
+                    <img class="Rectangle-31" src="/Studio-Design-Landing-Page/img/Rectangle-31.svg">
+                </div>
+                <div class="newsletter-content">
+                    <div class="newsletter-content-column-1">
+                        <h1>Subscribe Newsletter</h1>
+                        <p>I will update good news and promotion service not spam</p>
+                    </div>
+                    <div class="newsletter-content-column-2" id="form">
+                        <form id="form">
+                            <input type="email" id="email" name="email" placeholder="Enter your email address.." required autofocus>
+                            <button type="submit" id="contact">Contact Now</button>
+                            
+                        </form>
+                        <p class="hide confirm" id="response">We will contact you later!</p>
+                    </div>
+                </div>
+                <img class="Rectangle-32" src="/Studio-Design-Landing-Page/img/Rectangle-32.svg">
+                <img class="Group-73" src="/Studio-Design-Landing-Page/img/Group-73.svg">
+            </div>
         </main>
+        <footer>
+            <div class="footer-row">
+                <div class="footer-logo">
+                    <a href="#" class="top-menu-logo" target="_blank">
+                        <img src="/Studio-Design-Landing-Page/img/top-menu-logo.png" alt="top-menu-logo.png" height="25px">
+                    </a>
+                    <p>
+                        Leading digital agency with solid design <br> and development expertise. We build <br> readymade websites, mobile applications, <br> and elaborate online business services.
+                    </p>
+                </div>
+                <div class="footer-column">
+                </div>
+                <div class="footer-column">
+                    <h3>What We Do</h3>
+                    <a href="#" target="_blank">Web Design</a>
+                    <a href="#" target="_blank">App Design</a>
+                    <a href="#" target="_blank">Social Media Manage</a>
+                    <a href="#" target="_blank">Market Analysis Project</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="#" target="_blank">About Us</a>
+                    <a href="#" target="_blank">Career</a>
+                    <a href="#" target="_blank">Become Investor</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <a href="#" target="_blank">FAQ</a>
+                    <a href="#" target="_blank">Policy</a>
+                    <a href="#" target="_blank">Business</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <a href="#" target="_blank">WhatsApp</a>
+                    <a href="#" target="_blank">Support 24</a>
+                </div>
+            
+            </div>
+
+            <div class="footer-row2">
+                <img src="/Studio-Design-Landing-Page/img/fb.svg">
+                <img src="/Studio-Design-Landing-Page/img/twitter.svg">
+                <img src="/Studio-Design-Landing-Page/img/linkedin.svg">
+            </div>
+            <div class="footer-row3">
+                <p>Copyright © 2022 Avi Yansah</p>
+            </div>
+        </footer>
         <script>
             function handleClick (e) {
                 e.preventDefault(); 
@@ -121,6 +192,21 @@
             button[0].addEventListener('click', function() {
                 console.log('Contact me click');
             });
+
+            // находим кнопку вторую
+            // добавить ей событие onclick
+            // элементу кнопке добавить класс hide
+            // элементу input добавить класс hide
+            // эл-ту p убрать класс hide, добавить кл show
+            const buttonInput = document.getElementById("contact");
+            const inputField = document.getElementById("email");
+            const par = document.getElementById("response");
+            buttonInput.onclick = () => {
+                buttonInput.classList.add("hide");
+                inputField.classList.add("hide");
+                par.classList.remove("hide");
+                par.classList.add("confirm");
+            }
         </script>
     </body>
 </html>

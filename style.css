@@ -3,10 +3,16 @@
 }
 
 body {
-    /* width: 1440px;
-    height: 4102px; */
-    margin: 50px 100px;
     background-color: #FEFEFE;
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
 
 a {
@@ -23,7 +29,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin: 42px 120px 50px;
 }
 
 nav {
@@ -42,6 +48,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     gap: 100px;
+    margin: 42px 0px 50px 120px;
 }
 
 h1 {
@@ -69,6 +76,10 @@ button {
     z-index: 2;
 }
 
+.headliner-description a {
+    color: #FEFEFE;
+}
+
 .headliner-img {
     position: relative;
     z-index: 2;
@@ -76,39 +87,42 @@ button {
 
 .ellipse-85 {
     position: absolute;
-    left: 625px;
-    top: 138px;
+    left: 720px;
+    top: 130px;
 }
 
 .rectangle-23 {
     position: absolute;
-    left: 1060px;
+    left: 1150px;
     top: 495px;
 }
 
 .dots {
     position: absolute;
-    /* left: 3%;
-    top: 69%; */
-    left: 41px;
-    top: 490px;
+    left: 61px;
+    top: 475px;
 }
 
 .our-client-h1 h1 {
-    margin: 70px 0 0 0;
+    margin: 120px 120px 0px;
 }
 
 .our-client {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 120px 50px;
+}
+
+.our-client p {
+    margin: 0;
 }
 
 .help {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 70px 0 0 0;
+    margin: 70px 120px 50px 120px;
     /* gap: 20px; */
 }
 
@@ -134,8 +148,8 @@ h3 {
     border: 1px solid #F2F2F2;
     border-radius: 40px;
     background-color: #FEFEFE;
-    width: 200px;
-    height: 330px;
+    width: 210px;
+    height: 300px;
     padding: 20px 20px 0 20px;
     margin: 40px 20px;
     display: flex;
@@ -148,7 +162,7 @@ h3 {
 
 .help-column-2 {
     position: relative;
-    top: 50px;
+    top: 70px;
 }
 
 .help-column-2-item-1 p,
@@ -157,6 +171,10 @@ h3 {
 .help-column-3-item-2 p {
     text-align: center;
     margin: 0;
+}
+
+.help-column-4 {
+    width: 300px;
 }
 
 .help-column-2-item-1 img {
@@ -185,17 +203,160 @@ h3 {
 
 .Rectangle-25 {
     position: absolute;
-    left: 41px;
-    top: 1040px;
+    left: 83px;
+    top: 1140px;
 }
 
 .Rectangle-24 {
     position: absolute;
-    right: 0px;
-    top: 950px;
+    right: -205px;
+    top: 1100px;
+    z-index: 1;
 }
 
-.help-column-4 {
-    width: 300px;
+.Group-70 {
+    position: absolute;
+    left: 120px;
+    top: 1480px;
 }
 
+.Ellipse-87 {
+    position: absolute;
+    right: 90px;
+    top: 1580px;
+}
+
+.newsletter-bkgrnd {
+    position: absolute;
+}
+
+.Rectangle-30 {
+    position: absolute;
+    margin: 42px 120px 50px;
+}
+
+.Rectangle-31 {
+    position: relative;
+    z-index: 2;
+    left: 820px;
+    top: 44px;
+}
+
+.Rectangle-32 {
+    position: relative;
+    z-index: -1;
+    top: 90px;
+    left: 80px;
+}
+
+.Group-73 {
+    position: relative;
+    top: -142px;
+    left: 994px;
+}
+
+.newsletter-content {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 140px;
+}
+
+.newsletter-content-column-1 {
+    margin: 0 0 0 70px;
+}
+
+.newsletter-content-column-1 h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter-content-column-1 p {
+    padding: 0;
+}
+
+input {
+    position: relative;
+    z-index: 2;
+    padding: 15px 30px;
+    border: 1px solid #F1F1F1;
+    border-radius: 40px;
+    Width: 350px;
+    Height: 32px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+form button {
+    right: 170px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+    margin: 150px 120px 0px;
+    padding: 50px 0 30px;
+    border-top: 1px solid #E4E4E4;
+}
+
+.footer-logo img {
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    margin: 0;
+    color: #565656;
+
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column a {
+    padding: 5px 0;
+    font-size: 13px;
+}
+
+.footer-column h3 {
+    margin: 0 0 20px 0;
+}
+
+.footer-row2 {
+    margin: 0px 120px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.footer-row2 img {
+    margin: 0px 15px 0 0;
+}
+
+.footer-row3 {
+    margin: 0px 120px;
+    padding-top: 15px;
+    color: #A4A4A4;
+    text-align: center;
+
+}
+
+.confirm {
+    position: relative;
+    z-index: 2;
+    padding: 15px 30px;
+    margin: 0;
+    /* border: 1px solid #F1F1F1;
+    border-radius: 40px; */
+    Width: 513px;
+    Height: 32px;
+    text-align: center;
+    color: #FEFEFE;
+}
