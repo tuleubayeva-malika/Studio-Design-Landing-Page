@@ -19,7 +19,7 @@
                 <a href="#help" class="menu-item" onclick="handleClick(e)">
                     What We Do
                 </a>
-                <a href="#form" class="menu-item" onclick="handleClick(e)">
+                <a href="#email" class="menu-item" onclick="handleClick(e)">
                     Contact
                 </a>
             </nav>
@@ -29,7 +29,7 @@
                 <div class="headliner-description">
                     <h1>A Digital Product Agency</h1>
                     <p>Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online business services.</p>
-                    <button id="contact1"><a href="#form">Contact now</a></button>
+                    <button id="contact1"><a href="#email">Contact now</a></button>
                 </div>
                 <div class="headliner-img">
                     <img src="img/headliner.png" alt="headliner.png" width="650px">
@@ -105,7 +105,7 @@
                         <h1>Subscribe Newsletter</h1>
                         <p>I will update good news and promotion service not spam</p>
                     </div>
-                    <div class="newsletter-content-column-2" id="form">
+                    <div class="newsletter-content-column-2">
                         <form>
                             <label for="email"></label>
                             <input type="email" id="email" name="email" placeholder="Enter your email address.." required>
@@ -167,16 +167,6 @@
             </div>
         </footer>
         <script>
-            // найти первую кнопку
-            // найти поле инпут
-            // добавить кнопке 1 событие onclick
-            // добавить инпут аттрибут автофокус
-            const buttonFirst = document.getElementById("contact1");
-            const inputField = document.getElementById("email");
-
-            buttonFirst.onclick = () => {
-                inputField.focus();
-            }
 
             // находим кнопку вторую
             // добавить ей событие onclick
@@ -184,6 +174,7 @@
             // элементу input добавить класс hide
             // эл-ту p убрать класс hide, добавить кл show
             const buttonInput = document.getElementById("contact2");
+            const inputField = document.getElementById("email");
             const par = document.getElementById("response");
             buttonInput.onclick = () => {
                 buttonInput.classList.add("hide");
