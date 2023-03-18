@@ -86,7 +86,7 @@
                         <h3>Market Analysis <br> Project</h3>
                         <p>Protocols apart from aengage models, pricing billing</p>
                     </div>
-                
+
 
                 </div>
                 <img class="Rectangle-25" src="/Studio-Design-Landing-Page/img/Rectangle-25.svg">
@@ -105,10 +105,10 @@
                         <p>I will update good news and promotion service not spam</p>
                     </div>
                     <div class="newsletter-content-column-2" id="form">
-                        <form id="form">
+                        <form>
                             <input type="email" id="email" name="email" placeholder="Enter your email address.." required>
                             <button type="submit" id="contact2">Contact Now</button>
-                            
+
                         </form>
                         <p class="hide confirm" id="response">We will contact you later!</p>
                     </div>
@@ -153,7 +153,7 @@
                     <a href="#" target="_blank">WhatsApp</a>
                     <a href="#" target="_blank">Support 24</a>
                 </div>
-            
+
             </div>
 
             <div class="footer-row2">
@@ -166,36 +166,16 @@
             </div>
         </footer>
         <script>
-            function handleClick (e) {
-                // e.preventDefault(); 
-                // e.stopPropagation();
-                console.log('clicked');
-                // 1 - найти элемент с классом Home и удалить у него класс
-                // 2 - взять эл-т и добавить в него класс Home
-                const previous = document.querySelector('.active');
-                console.log(e);
-                previous.classList.remove('active');
-                e.target.classList.add('active');
-            }
-        </script>
-        <script>
             // найти первую кнопку
             // найти поле инпут
             // добавить кнопке 1 событие onclick
             // добавить инпут аттрибут автофокус
             const buttonFirst = document.getElementById("contact1");
-            const inpField = document.getElementById("email");
-           
+            const inputField = document.getElementById("email");
+
             buttonFirst.onclick = () => {
-                inpField.focus();
-                
+                inputField.focus({ focusVisible: true });
             }
-        </script>
-        <script>
-            // const button = document.getElementById('contact');
-            // button[0].addEventListener('click', function() {
-            //     console.log('Contact me click');
-            // });
 
             // находим кнопку вторую
             // добавить ей событие onclick
@@ -203,13 +183,20 @@
             // элементу input добавить класс hide
             // эл-ту p убрать класс hide, добавить кл show
             const buttonInput = document.getElementById("contact2");
-            const inputField = document.getElementById("email");
             const par = document.getElementById("response");
             buttonInput.onclick = () => {
                 buttonInput.classList.add("hide");
                 inputField.classList.add("hide");
                 par.classList.remove("hide");
                 par.classList.add("confirm");
+            }
+
+            function handleClick (e) {
+                // 1 - найти элемент с классом Home и удалить у него класс
+                // 2 - взять эл-т и добавить в него класс Home
+                const previous = document.querySelector('.active');
+                previous.classList.remove('active');
+                e.target.classList.add('active');
             }
         </script>
     </body>
