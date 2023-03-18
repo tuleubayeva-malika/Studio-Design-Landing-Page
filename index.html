@@ -7,27 +7,18 @@
     <body>
         <header>
             <div class="main-logo">
-                <a href="#" class="top-menu-logo" target="_blank">
+                <a href="index.html" class="top-menu-logo">
                     <img src="/Studio-Design-Landing-Page/img/top-menu-logo.png" alt="top-menu-logo.png" height="34px">
                 </a>
             </div>
             <nav>
-                <a href="#" class="menu-item active" target="_blank" onclick="handleClick(event)">
+                <a href="index.html" class="menu-item active" onclick="handleClick(event)">
                     Home
                 </a>
-                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
+                <a href="#help" class="menu-item" onclick="handleClick(event)">
                     What We Do
                 </a>
-                <!-- <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
-                    Service
-                </a>
-                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
-                    Project
-                </a>
-                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
-                    Blog
-                </a> -->
-                <a href="#" class="menu-item" target="_blank" onclick="handleClick(event)">
+                <a href="#form" class="menu-item" onclick="handleClick(event)">
                     Contact
                 </a>
             </nav>
@@ -37,7 +28,7 @@
                 <div class="headliner-description">
                     <h1>A Digital Product Agency</h1>
                     <p>Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online business services.</p>
-                    <button><a href="#form">Contact now</a></button>
+                    <button id="contact1"><a href="#form">Contact now</a></button>
                 </div>
                 <div class="headliner-img">
                     <img src="/Studio-Design-Landing-Page/img/headliner.png" alt="headliner.png" width="650px">
@@ -66,7 +57,7 @@
                     <img src="/Studio-Design-Landing-Page/img/Amazon-Logo.svg" alt="Amazon-Logo.svg" width="130px">
                 </a>
             </div>
-            <div class="help">
+            <div class="help" id="help">
                 <div class="help-column-1">
                     <h1>How can we help your Business ?</h1>
                     <p>We build readymade websites, mobile applications, and elaborate online business services.</p>
@@ -115,8 +106,8 @@
                     </div>
                     <div class="newsletter-content-column-2" id="form">
                         <form id="form">
-                            <input type="email" id="email" name="email" placeholder="Enter your email address.." required autofocus>
-                            <button type="submit" id="contact">Contact Now</button>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address.." required>
+                            <button type="submit" id="contact2">Contact Now</button>
                             
                         </form>
                         <p class="hide confirm" id="response">We will contact you later!</p>
@@ -176,7 +167,7 @@
         </footer>
         <script>
             function handleClick (e) {
-                e.preventDefault(); 
+                // e.preventDefault(); 
                 // e.stopPropagation();
                 console.log('clicked');
                 // 1 - найти элемент с классом Home и удалить у него класс
@@ -186,19 +177,32 @@
                 previous.classList.remove('active');
                 e.target.classList.add('active');
             }
-
-            const button = document.getElementsByTagName('button');
-            console.log(button);
-            button[0].addEventListener('click', function() {
-                console.log('Contact me click');
-            });
+        </script>
+        <script>
+            // найти первую кнопку
+            // найти поле инпут
+            // добавить кнопке 1 событие onclick
+            // добавить инпут аттрибут автофокус
+            const buttonFirst = document.getElementById("contact1");
+            const inpField = document.getElementById("email");
+           
+            buttonFirst.onclick = () => {
+                inpField.focus();
+                
+            }
+        </script>
+        <script>
+            // const button = document.getElementById('contact');
+            // button[0].addEventListener('click', function() {
+            //     console.log('Contact me click');
+            // });
 
             // находим кнопку вторую
             // добавить ей событие onclick
             // элементу кнопке добавить класс hide
             // элементу input добавить класс hide
             // эл-ту p убрать класс hide, добавить кл show
-            const buttonInput = document.getElementById("contact");
+            const buttonInput = document.getElementById("contact2");
             const inputField = document.getElementById("email");
             const par = document.getElementById("response");
             buttonInput.onclick = () => {
