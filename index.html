@@ -4,6 +4,8 @@
         <title>Studio Design</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     </head>
     <body>
         <header>
@@ -27,8 +29,8 @@
         <main>
             <div class="headliner">
                 <div class="headliner-description">
-                    <h1>A Digital Product Agency</h1>
-                    <p>Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online business services.</p>
+                    <h1 class="headliner-description-h1">A Digital Product Agency</h1>
+                    <p class="headliner-description-p">Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online business services.</p>
                     <button id="contact1"><a href="#email">Contact now</a></button>
                 </div>
                 <div class="headliner-img">
@@ -190,6 +192,25 @@
                 previous.classList.remove('active');
                 e.target.classList.add('active');
             }
+        </script>
+        <script>
+            gsap.from(".headliner-description-h1", {xPercent:-100, ease:"linear", duration:1.5});
+            gsap.from(".headliner-description-p", {y:50, ease:"linear", duration:1});
+            gsap.to(".ellipse-85", {y:250, ease:"linear", repeat:-1, yoyo:true, duration:2});
+            gsap.to(".rectangle-23", {rotation:360, repeat:-1, yoyo:true, duration:2});
+            gsap.timeline().from(".our-client-h1", {xPercent:-100, ease:"linear", duration:2, 
+                scrollTrigger: {
+                    trigger: ".our-client-h1",
+                    markers: false,
+                    start: "top center"
+                }});
+            gsap.timeline().from(".our-client img", {y:50, ease:"linear", stagger:0.3, 
+                scrollTrigger: {
+                    trigger: ".our-client-h1",
+                    markers: false,
+                    start: "top center"
+                }}, "<0.5");
+            
         </script>
     </body>
 </html>
